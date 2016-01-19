@@ -1,0 +1,11 @@
+{
+  "name": "npm-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare:stylus": "stylus stylus/site.styl --out dist/"
+  },
+  "author": "Klughertz Jonathan (http://klugjo.github.io/)",
+  "license": "ISC"
+}

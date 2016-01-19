@@ -1,0 +1,15 @@
+{
+  "name": "clientprepare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "package:stylus": "stylus src/stylus/site.styl --out dist/",
+    "package:jade": "jade src --out dist/",
+    "package:js": "browserify ./src/js/main.js | uglifyjs --compress > ./dist/bundle.min.js",
+    "package": "npm run package:stylus && npm run package:jade && npm run package:js",
+    "prepackage": "rimraf dist/*"
+  },
+  "author": "Klughertz Jonathan <klughertz.j@gmail.com> (http://klugjo.github.io/)",
+  "license": "ISC"
+}
