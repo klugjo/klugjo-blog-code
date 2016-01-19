@@ -33,5 +33,11 @@ node_modules
 # Optional REPL history
 .node_repl_history
 
-# ignore subdirectory with node dependencies
+# ignore subdirectories with node dependencies
 */node_modules
+
+# ignore subdirectories with .idea webstorm proj
+*/.idea
+
+*/.DS_Store
+
