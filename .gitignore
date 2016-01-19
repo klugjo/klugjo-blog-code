@@ -39,5 +39,5 @@ node_modules
 # ignore subdirectories with .idea webstorm proj
 */.idea
 
-*/.DS_Store
+.DS_Store
 
