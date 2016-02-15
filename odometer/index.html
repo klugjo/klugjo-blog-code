@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/odometer/0.4.7/themes/odometer-theme-car.css" type="text/css">
+</head>
+<body>
+
+<script type="application/javascript">
+
+    function updateNumbers() {
+        setInterval(function(){
+            var val = Math.floor(Math.random()*1000);
+            val = val < 100 ? (val + 100) : val;
+            document.getElementById('odometer').innerHTML = val;
+        }, 5000);
+    }
+
+    updateNumbers();
+</script>
+
+<div id="odometer" class="odometer">321</div>
+
+</body>
+</html>
