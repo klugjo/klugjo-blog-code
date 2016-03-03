@@ -1,5 +1,4 @@
 import jsdom from 'jsdom';
-import chai from 'chai';
 
 // JSDOM configuration
 const doc = jsdom.jsdom('<!doctype html><html><body></body></html>');
