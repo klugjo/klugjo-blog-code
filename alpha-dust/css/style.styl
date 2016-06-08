@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+linearGradient($top, $bottom)
+  background: $top
+  background: -moz-linear-gradient(top, $top 0%, $bottom 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom))
+  background: -webkit-linear-gradient(top, $top 0%, $bottom 100%)
+  background: -o-linear-gradient(top, $top 0%, $bottom 100%)
+  background: -ms-linear-gradient(top, $top 0%, $bottom 100%)
+  background: linear-gradient(to bottom, $top 0%, $bottom 100%)
+
+$headerBgColor = #113a47
+$bgColor = #0f1516
+$mainColor1 = #d7ecff
+$btnBgColor = #d7ecff
+$btnTextColor = #113a47
+$fontTitle = "Orbitron", sans-serif
+$titleTextShadow = 0 0 1px white, 0 0 5px white, 0 0 15px #228dff
+
+body
+  background: $bgColor
+  font-family: 'Open Sans', sans-serif
+
+.bg-gradient
+  linearGradient(lighten(#0f1516, 5%), lighten(#113a47, 20%))
+  width: 100vw
+  height: 100vh
+  position: fixed
+  z-index: -2
+
+.bg-pattern
+  background: url("../img/bg-pattern.png") repeat
+  opacity: 0.5
+  width: 100vw
+  height: 100vh
+  position: fixed
+  z-index: -1
+
+.bg-pattern-blue
+  background: url("../img/bg-pattern-blue.png") repeat
+  width: 100vw
+  height: 100vh
+  position: fixed
+  z-index: -2
+
+a, a:link, a:visited, a:active
+  color: $mainColor1
+  border-bottom 1px dotted $mainColor1
+  cursor: pointer
+  transition: text-shadow 0.3s ease, border-bottom-color 0.5s ease
+a:hover
+  color $mainColor1
+  text-shadow $titleTextShadow
+  border-bottom 1px dotted transparent
+  text-decoration none
+
+.btn
+  color: $btnTextColor
+  text-decoration: none
+  font-family: $fontTitle
+  background: $btnBgColor
+  &:hover
+    background: darken($btnBgColor, 8%)
+    transition: all 0.3s ease
+  &:active
+    background: darken($btnBgColor, 25%)
+
+header
+  height: 300px
+  padding-top: 100px
+  .logo
+    margin: 0 auto
+    text-align: center
+    .logo-icon
+      font-size: 60px
+      color: $mainColor1
+      text-shadow: $titleTextShadow
+    img
+      width: 100px
+      height: 100px
+      border-radius: 50%
+    .title
+      line-height: 100px
+      color: $mainColor1
+      font-family: $fontTitle
+      text-shadow: $titleTextShadow
+
+
+section.main
+  color: $mainColor1
+  .post
+    margin-top: 120px
+    .post-header
+      position relative
+      width 100%
+      margin 0 5px
+      &:before
+        position absolute
+        padding 5px
+        top -10px
+        bottom -10px
+        left -5px
+        content "  "
+        border-left 1px solid $mainColor1
+        border-bottom 1px solid $mainColor1
+        border-top 1px solid $mainColor1
+      &:after
+        position absolute
+        content "  "
+        padding 5px
+        top -10px
+        bottom -10px
+        right -5px
+        border-right 1px solid $mainColor1
+        border-bottom 1px solid $mainColor1
+        border-top 1px solid $mainColor1
+      h1.title
+        text-align: center
+        font-family: $fontTitle
+        text-shadow: $titleTextShadow
+    .post-info
+      margin-top: 15px
+      text-align: center
+      text-transform: uppercase
+      font-family: $fontTitle
+      span
+        padding: 10px
+    .content
+      margin-top: 65px
+    .read-more
+      margin: 10px auto
+
+.push
+  height: 200px
+
+footer
+  padding-top: 100px
+  width: 100%
+  min-height: 350px
+  background: $bgColor
+  color: $mainColor1
+  font-family: $fontTitle
+  a, a:link, a:visited, a:active
+    color: $mainColor1
+    text-decoration: none
+    cursor: pointer
+    transition: color 0.3s ease
+  h2
+    font-size: 12px
+    padding-bottom: 30px
+  ul
+    list-style-type: none
+    padding-left: 0

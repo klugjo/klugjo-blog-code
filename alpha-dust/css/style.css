@@ -1,119 +1,167 @@
-@import url(https://fonts.googleapis.com/css?family=Orbitron:500);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url("https://fonts.googleapis.com/css?family=Orbitron:500");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 body {
-  background: #0F1516;
-  font-family: 'Open Sans', sans-serif; }
-
+  background: #0f1516;
+  font-family: 'Open Sans', sans-serif;
+}
 .bg-gradient {
-  background: #192325;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #192325 0%, #257d99 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #192325), color-stop(100%, #257d99));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #192325 0%, #257d99 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #192325 0%, #257d99 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #192325 0%, #257d99 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #192325 0%, #257d99 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
-  /* IE6-9 */
+  background: #192224;
+  background: -moz-linear-gradient(top, #192224 0%, #21728b 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #192224), color-stop(100%, #21728b));
+  background: -webkit-linear-gradient(top, #192224 0%, #21728b 100%);
+  background: -o-linear-gradient(top, #192224 0%, #21728b 100%);
+  background: -ms-linear-gradient(top, #192224 0%, #21728b 100%);
+  background: linear-gradient(to bottom, #192224 0%, #21728b 100%);
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: -2; }
-
+  z-index: -2;
+}
 .bg-pattern {
   background: url("../img/bg-pattern.png") repeat;
   opacity: 0.5;
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: -1; }
-
-a, a:link, a:visited, a:active {
-  color: #D7ECFF;
-  text-decoration: underline;
+  z-index: -1;
+}
+.bg-pattern-blue {
+  background: url("../img/bg-pattern-blue.png") repeat;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -2;
+}
+a,
+a:link,
+a:visited,
+a:active {
+  color: #d7ecff;
+  border-bottom: 1px dotted #d7ecff;
   cursor: pointer;
-  transition: color 0.3s ease; }
-
+  transition: text-shadow 0.3s ease, border-bottom-color 0.5s ease;
+}
 a:hover {
-  color: #8bc8ff; }
-
+  color: #d7ecff;
+  text-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 15px #228dff;
+  border-bottom: 1px dotted transparent;
+  text-decoration: none;
+}
 .btn {
-  color: #113A47;
+  color: #113a47;
   text-decoration: none;
   font-family: "Orbitron", sans-serif;
-  background: #D7ECFF; }
-  .btn:hover {
-    background: #aed9ff;
-    transition: all 0.3s ease; }
-  .btn:active {
-    background: #58afff; }
-
+  background: #d7ecff;
+}
+.btn:hover {
+  background: #b1daff;
+  transition: all 0.3s ease;
+}
+.btn:active {
+  background: #62b4ff;
+}
 header {
   height: 300px;
-  padding-top: 100px; }
-  header .logo {
-    margin: 0 auto;
-    text-align: center; }
-    header .logo .logo-icon {
-      font-size: 60px;
-      color: #D7ECFF;
-      text-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 15px #228DFF; }
-    header .logo img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%; }
-    header .logo .title {
-      line-height: 100px;
-      color: #D7ECFF;
-      font-family: "Orbitron", sans-serif;
-      text-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 15px #228DFF; }
-
+  padding-top: 100px;
+}
+header .logo {
+  margin: 0 auto;
+  text-align: center;
+}
+header .logo .logo-icon {
+  font-size: 60px;
+  color: #d7ecff;
+  text-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 15px #228dff;
+}
+header .logo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+header .logo .title {
+  line-height: 100px;
+  color: #d7ecff;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 15px #228dff;
+}
 section.main {
-  color: #D7ECFF; }
-  section.main .post {
-    margin-top: 120px; }
-    section.main .post h1 {
-      text-align: center;
-      font-family: "Orbitron", sans-serif;
-      text-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 15px #228DFF; }
-    section.main .post .post-info {
-      margin-top: 15px;
-      text-align: center;
-      text-transform: uppercase;
-      font-family: "Orbitron", sans-serif; }
-      section.main .post .post-info span {
-        padding: 10px; }
-    section.main .post .content {
-      margin-top: 65px; }
-    section.main .post .read-more {
-      margin: 10px auto; }
-
+  color: #d7ecff;
+}
+section.main .post {
+  margin-top: 120px;
+}
+section.main .post .post-header {
+  position: relative;
+  width: 100%;
+  margin: 0 5px;
+}
+section.main .post .post-header:before {
+  position: absolute;
+  padding: 5px;
+  top: -10px;
+  bottom: -10px;
+  left: -5px;
+  content: "  ";
+  border-left: 1px solid #d7ecff;
+  border-bottom: 1px solid #d7ecff;
+  border-top: 1px solid #d7ecff;
+}
+section.main .post .post-header:after {
+  position: absolute;
+  content: "  ";
+  padding: 5px;
+  top: -10px;
+  bottom: -10px;
+  right: -5px;
+  border-right: 1px solid #d7ecff;
+  border-bottom: 1px solid #d7ecff;
+  border-top: 1px solid #d7ecff;
+}
+section.main .post .post-header h1.title {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 15px #228dff;
+}
+section.main .post .post-info {
+  margin-top: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Orbitron", sans-serif;
+}
+section.main .post .post-info span {
+  padding: 10px;
+}
+section.main .post .content {
+  margin-top: 65px;
+}
+section.main .post .read-more {
+  margin: 10px auto;
+}
 .push {
-  height: 200px; }
-
+  height: 200px;
+}
 footer {
   padding-top: 100px;
   width: 100%;
   min-height: 350px;
-  background: #0F1516;
-  color: #D7ECFF;
-  font-family: "Orbitron", sans-serif; }
-  footer a, footer a:link, footer a:visited, footer a:active {
-    color: #D7ECFF;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.3s ease; }
-  footer h2 {
-    font-size: 12px;
-    padding-bottom: 30px; }
-  footer ul {
-    list-style-type: none;
-    padding-left: 0; }
-
-/*# sourceMappingURL=style.css.map */
+  background: #0f1516;
+  color: #d7ecff;
+  font-family: "Orbitron", sans-serif;
+}
+footer a,
+footer a:link,
+footer a:visited,
+footer a:active {
+  color: #d7ecff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+footer h2 {
+  font-size: 12px;
+  padding-bottom: 30px;
+}
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
