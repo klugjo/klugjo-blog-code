@@ -85,6 +85,7 @@ header
       color: $mainColor1
       font-family: $fontTitle
       text-shadow: $titleTextShadow
+      cursor: pointer
 
 
 section.main
@@ -94,7 +95,7 @@ section.main
     .post-header
       position relative
       width 100%
-      margin 0 5px
+      margin 0 10px
       &:before
         position absolute
         padding 5px
@@ -105,6 +106,7 @@ section.main
         border-left 1px solid $mainColor1
         border-bottom 1px solid $mainColor1
         border-top 1px solid $mainColor1
+        transition: left 0.3s ease
       &:after
         position absolute
         content "  "
@@ -115,24 +117,64 @@ section.main
         border-right 1px solid $mainColor1
         border-bottom 1px solid $mainColor1
         border-top 1px solid $mainColor1
+        transition: right 0.3s ease
       h1.title
         text-align: center
         font-family: $fontTitle
         text-shadow: $titleTextShadow
-    .post-info
-      margin-top: 15px
-      text-align: center
-      text-transform: uppercase
-      font-family: $fontTitle
-      span
-        padding: 10px
+        cursor pointer
+      .post-info
+        margin-top: 15px
+        text-align: center
+        text-transform: uppercase
+        font-family: $fontTitle
+        span
+          padding: 10px
+      &.hover
+        &:before
+          left 5px
+        &:after
+          right 5px
     .content
       margin-top: 65px
     .read-more
       margin: 10px auto
+      font-family $fontTitle
+      text-transform uppercase
 
 .push
   height: 200px
+
+.menu-bg
+  background: #000
+  display none
+  opacity: 0
+  width: 100vw
+  height: 100vh
+  position: fixed
+  z-index: 100
+  .menu-container
+    position: fixed
+    padding 0 250px
+    border-left 1px solid $mainColor1
+    border-right 1px solid $mainColor1
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    ul
+      list-style-type none
+      margin-bottom 0
+      li
+        text-align right
+        padding 5px
+        a
+          font-family $fontTitle
+          text-transform uppercase
+          font-size 30px
+          border-bottom none
+
+
+
 
 footer
   padding-top: 100px
@@ -141,6 +183,7 @@ footer
   background: $bgColor
   color: $mainColor1
   font-family: $fontTitle
+  border-top 1px dotted $mainColor1
   a, a:link, a:visited, a:active
     color: $mainColor1
     text-decoration: none

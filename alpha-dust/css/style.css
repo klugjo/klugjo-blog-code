@@ -83,6 +83,7 @@ header .logo .title {
   color: #d7ecff;
   font-family: "Orbitron", sans-serif;
   text-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 15px #228dff;
+  cursor: pointer;
 }
 section.main {
   color: #d7ecff;
@@ -93,7 +94,7 @@ section.main .post {
 section.main .post .post-header {
   position: relative;
   width: 100%;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 section.main .post .post-header:before {
   position: absolute;
@@ -105,6 +106,7 @@ section.main .post .post-header:before {
   border-left: 1px solid #d7ecff;
   border-bottom: 1px solid #d7ecff;
   border-top: 1px solid #d7ecff;
+  transition: left 0.3s ease;
 }
 section.main .post .post-header:after {
   position: absolute;
@@ -116,29 +118,71 @@ section.main .post .post-header:after {
   border-right: 1px solid #d7ecff;
   border-bottom: 1px solid #d7ecff;
   border-top: 1px solid #d7ecff;
+  transition: right 0.3s ease;
 }
 section.main .post .post-header h1.title {
   text-align: center;
   font-family: "Orbitron", sans-serif;
   text-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 15px #228dff;
+  cursor: pointer;
 }
-section.main .post .post-info {
+section.main .post .post-header .post-info {
   margin-top: 15px;
   text-align: center;
   text-transform: uppercase;
   font-family: "Orbitron", sans-serif;
 }
-section.main .post .post-info span {
+section.main .post .post-header .post-info span {
   padding: 10px;
+}
+section.main .post .post-header.hover:before {
+  left: 5px;
+}
+section.main .post .post-header.hover:after {
+  right: 5px;
 }
 section.main .post .content {
   margin-top: 65px;
 }
 section.main .post .read-more {
   margin: 10px auto;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
 }
 .push {
   height: 200px;
+}
+.menu-bg {
+  background: #000;
+  display: none;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+}
+.menu-bg .menu-container {
+  position: fixed;
+  padding: 0 250px;
+  border-left: 1px solid #d7ecff;
+  border-right: 1px solid #d7ecff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu-bg .menu-container ul {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+.menu-bg .menu-container ul li {
+  text-align: right;
+  padding: 5px;
+}
+.menu-bg .menu-container ul li a {
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  border-bottom: none;
 }
 footer {
   padding-top: 100px;
@@ -147,6 +191,7 @@ footer {
   background: #0f1516;
   color: #d7ecff;
   font-family: "Orbitron", sans-serif;
+  border-top: 1px dotted #d7ecff;
 }
 footer a,
 footer a:link,
