@@ -1,0 +1,38 @@
+header
+  margin 50px 0
+  .logo
+    text-align center
+    .logo-img
+      max-width 350px
+
+
+  nav
+    display none
+
+$lg_width = 1200px
+$lg_padding = 15px
+$lg_big_width = $lg_width * 2/3
+$lg_big_pic_width = $lg_big_width - ($lg_padding * 2)
+$lg_small_width = $lg_width * 1/3
+$lg_small_pic_width = $lg_small_width - ($lg_padding * 2)
+
+main
+  img
+    vertical-align bottom
+  .picture-row
+    margin 0 auto
+    width $lg_width
+    display flex
+    .picture-big-container
+      width $lg_big_width
+      padding $lg_padding
+      img
+        width $lg_big_pic_width
+        height $lg_big_pic_width
+    .picture-small-container
+      width $lg_small_width
+      .picture-small
+        padding $lg_padding
+        img
+          width $lg_small_pic_width
+          height $lg_small_pic_width
