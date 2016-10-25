@@ -1,0 +1,15 @@
+{
+  "name": "electron-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-stage-0": "^6.16.0",
+    "electron-prebuilt-compile": "^1.4.4"
+  }
+}
