@@ -76,10 +76,51 @@ body {
     justify-content: center;
 }
 
-.tile {
-    background-color: tomato;
+.card-container {
     margin: 10px;
     width: 350px;
+    height: 240px;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-transform-origin: right center;
+    transform-origin: right center;
+    -webkit-transform-transition: transform 1s;
+    transition: transform 0.7s;
+}
+
+.card.flipped {
+    transform: translateX(-100%) rotateY(180deg);
+}
+
+.card-face {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.tile {
+    background-color: tomato;
     height: 240px;
 
     color: white;
