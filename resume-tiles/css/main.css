@@ -56,58 +56,52 @@ body {
     background: #e2e1e0;
 }
 
-.wrapper {
-    width: 90%;
-    margin: 0 5%;
+.clearfix {
+    clear: both;
 }
 
 .tiles {
+    width: 90%;
     max-width: 1300px;
     padding: 0;
     margin: 0 auto;
-
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-
-    -webkit-flex-flow: row wrap;
-    justify-content: center;
 }
 
 .card-container {
     margin: 10px;
     width: 350px;
     height: 240px;
-    -webkit-perspective: 1200px;
-    perspective: 1200px;
+    float: left;
 }
 
 .card {
-    position: relative;
     width: 100%;
     height: 100%;
+}
+
+.card.enlarged {
+    position: fixed;
+    width: 50vw;
+    height: 50vh;
+    top: 50%;
+    left: 50%;
+    margin-top: -25vh; /* Negative half of height. */
+    margin-left: -25vw; /* Negative half of width. */
 }
 
 .card-face {
     margin: 0;
-    display: block;
-    position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-transform-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 
 .tile {
     background-color: tomato;
     height: 240px;
-
     color: white;
     text-align: center;
-
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    height: 100%;
 }
 
 .tile-icon {
