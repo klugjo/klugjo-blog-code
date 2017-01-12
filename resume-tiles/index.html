@@ -18,157 +18,30 @@
         <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="tiles">
-            <div class="card-container">
+        <div id="app" class="tiles">
+            <div class="card-container" v-for="card in cards">
                 <div class="card">
-                    <div class="card-face card-front">
+                    <div class="card-face">
                         <div class="tile color-1">
                             <div class="tile-icon">
-                                <i class="icon ion-help"></i>
+                                <i v-bind:class="card.iconCssClass"></i>
                             </div>
                             <hr />
                             <div class="tile-text">
-                                About
+                                {{ card.title }}
                             </div>
-                        </div>
-                    </div>
-                    <div class="card-face card-back">
-                        <div class="tile color-1">
-                            lorem ipsum english. This is the rule now ? I want some bread and cookies.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-face card-front">
-                        <div class="tile color-1">
-                            <div class="tile-icon">
-                                <i class="devicon-docker-plain"></i>
-                            </div>
-                            <hr />
-                            <div class="tile-text">
-                                Docker
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-face card-back">
-                        <div class="tile color-1">
-                            lorem ipsum english. This is the rule now ? I want some bread and cookies.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-face card-front">
-                        <div class="tile color-1">
-                            <div class="tile-icon">
-                                <i class="devicon-react-original"></i>
-                            </div>
-                            <hr />
-                            <div class="tile-text">
-                                React
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-face card-back">
-                        <div class="tile color-1">
-                            lorem ipsum english. This is the rule now ? I want some bread and cookies.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-face card-front">
-                        <div class="tile color-1">
-                            <div class="tile-icon">
-                                <i class="icon ion-help"></i>
-                            </div>
-                            <hr />
-                            <div class="tile-text">
-                                About
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-face card-back">
-                        <div class="tile color-1">
-                            lorem ipsum english. This is the rule now ? I want some bread and cookies.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-face card-front">
-                        <div class="tile color-1">
-                            <div class="tile-icon">
-                                <i class="icon ion-help"></i>
-                            </div>
-                            <hr />
-                            <div class="tile-text">
-                                About
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-face card-back">
-                        <div class="tile color-1">
-                            lorem ipsum english. This is the rule now ? I want some bread and cookies.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-face card-front">
-                        <div class="tile color-1">
-                            <div class="tile-icon">
-                                <i class="icon ion-help"></i>
-                            </div>
-                            <hr />
-                            <div class="tile-text">
-                                About
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-face card-back">
-                        <div class="tile color-1">
-                            lorem ipsum english. This is the rule now ? I want some bread and cookies.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-face card-front">
-                        <div class="tile color-1">
-                            <div class="tile-icon">
-                                <i class="icon ion-help"></i>
-                            </div>
-                            <hr />
-                            <div class="tile-text">
-                                About
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-face card-back">
-                        <div class="tile color-1">
-                            lorem ipsum english. This is the rule now ? I want some bread and cookies.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <script src="//ajax.googleapis.com/ajax/divbs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
 
