@@ -29,7 +29,7 @@
         <div id="app" class="tiles">
             <div class="card-container" v-for="(card, index) in cards">
                 <div class="card" v-on:click="onCardClick(index)">
-                    <div class="tile color-1" v-bind:class="{ active: index === openCardIndex }">
+                    <div v-bind:class="[{ active: index === openCardIndex }, 'tile', 'color-' + index % 10]">
                         <div class="tile-icon">
                             <i v-bind:class="card.iconCssClass"></i>
                         </div>

@@ -5,6 +5,21 @@ var resumeApp = function () {
         { title: 'JavaScript', iconCssClass: 'devicon-javascript-plain' },
         { title: 'OSX', iconCssClass: 'ion-social-apple' },
         { title: 'Angular', iconCssClass: 'devicon-angularjs-plain' },
+        { title: 'Docker', iconCssClass: 'devicon-docker-plain' },
+        { title: 'React', iconCssClass: 'devicon-react-original' },
+        { title: 'JavaScript', iconCssClass: 'devicon-javascript-plain' },
+        { title: 'OSX', iconCssClass: 'ion-social-apple' },
+        { title: 'Angular', iconCssClass: 'devicon-angularjs-plain' },
+        { title: 'Docker', iconCssClass: 'devicon-docker-plain' },
+        { title: 'React', iconCssClass: 'devicon-react-original' },
+        { title: 'JavaScript', iconCssClass: 'devicon-javascript-plain' },
+        { title: 'OSX', iconCssClass: 'ion-social-apple' },
+        { title: 'Angular', iconCssClass: 'devicon-angularjs-plain' },
+        { title: 'Docker', iconCssClass: 'devicon-docker-plain' },
+        { title: 'React', iconCssClass: 'devicon-react-original' },
+        { title: 'JavaScript', iconCssClass: 'devicon-javascript-plain' },
+        { title: 'OSX', iconCssClass: 'ion-social-apple' },
+        { title: 'Angular', iconCssClass: 'devicon-angularjs-plain' },
     ];
 
     var tweenOpenCard = null;
