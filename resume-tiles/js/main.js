@@ -7,6 +7,15 @@ var resumeApp = function () {
         { title: 'Angular', iconCssClass: 'devicon-angularjs-plain' },
     ];
 
+    var tweenOpenCard = null;
+
+    var popupOverlayDOM = document.getElementsByClassName('popup-overlay');
+    var cardsDOM = document.getElementsByClassName('card');
+
+    var constants = {
+        POPUP_OPEN_DURATION: 0.3
+    };
+
     var getViewportSize = function () {
         var e = window;
         var a = 'inner';
@@ -17,7 +26,7 @@ var resumeApp = function () {
         return { width: e[a + 'Width'], height: e[a + 'Height'] };
     };
 
-    var getPopupLayoutCss = function (cardDOM) { 
+    var getPopupLayoutCss = function (cardDOM) {
         var viewport = getViewportSize();
         var cardCoordinates = cardDOM.getBoundingClientRect();
         var cardMarginTop = Math.round((viewport.height / 4) - cardCoordinates.top);
@@ -29,32 +38,47 @@ var resumeApp = function () {
             'margin-top': cardMarginTop + 'px',
             'margin-left': cardMarginLeft + 'px'
         };
-    }
+    };
+
+    var showPopupOverlay = function () { 
+        TweenMax.to(popupOverlayDOM, constants.POPUP_OPEN_DURATION, { css: { 'opacity': '0.5' } });
+    };
+
+    var hidePopupOverlay = function () { 
+        TweenMax.to(popupOverlayDOM, constants.POPUP_OPEN_DURATION, { opacity: 0 });
+    };
 
     var enlargeCard = function (opts) { 
         var cardIndex = opts.cardIndex;
-        var cardsDOM = document.getElementsByClassName('card');
         var flipCard = opts.flipCard;
         var cardDOM = cardsDOM[cardIndex];
 
         var onReverseComplete = (function () {
             flipCard(null);
-            cardDOM.style['z-index'] = 1;
+            cardDOM.style['z-index'] = null;
         }).bind(this);
 
         flipCard(cardIndex);
         cardDOM.style['z-index'] = 10;
 
-        return TweenMax.to(cardDOM, 0.3, {
+        showPopupOverlay();
+
+        tweenOpenCard = TweenMax.to(cardDOM, constants.POPUP_OPEN_DURATION, {
             css: getPopupLayoutCss(cardDOM),
             onReverseComplete: onReverseComplete,
             ease: Back.easeOut.config(2)
         });
     };
 
+    var minimizeCard = function () { 
+        hidePopupOverlay();
+        tweenOpenCard.reverse();
+    };
+
     return {
         cards: cards,
-        enlargeCard: enlargeCard
+        enlargeCard: enlargeCard,
+        minimizeCard: minimizeCard
     }
 }();
 
@@ -63,7 +87,8 @@ new Vue({
     data: {
         cards: resumeApp.cards,
         openCardIndex: null,
-        tweenOpenCard: null
+        tweenOpenCard: null,
+        tweenPopupOverlay: null
     },
     methods: {
         flipCard: function (cardIndex) { 
@@ -71,12 +96,12 @@ new Vue({
         },
         onCardClick: function (cardIndex) {
             if (this.openCardIndex === null) {
-                this.tweenOpenCard = resumeApp.enlargeCard({
+                resumeApp.enlargeCard({
                     cardIndex: cardIndex,
                     flipCard: this.flipCard
                 });
             } else { 
-                this.tweenOpenCard.reverse();
+                resumeApp.minimizeCard();
             }
         }
     }

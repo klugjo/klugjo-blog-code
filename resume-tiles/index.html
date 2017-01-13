@@ -41,6 +41,11 @@
                 </div>
             </div>
             <div class="clearfix"></div>
+            <div id="popup-overlay" 
+                class="popup-overlay" 
+                v-bind:class="{ active: openCardIndex !== null }"
+                v-on:click="onCardClick(openCardIndex)">
+            </div>
         </div>
 
         <script src="js/main.js"></script>
