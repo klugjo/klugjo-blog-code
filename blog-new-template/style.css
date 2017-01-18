@@ -12,12 +12,12 @@ body {
     height: 40vh;
 }
 
-.gray-gradient {
-    background: #f2f2f2; /* Old browsers */
-    background: -moz-linear-gradient(top,  #f2f2f2 0%, #e5e5e5 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #f2f2f2 0%,#e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #f2f2f2 0%,#e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+.bg-1 {
+    background-color: #29C6CD;
+}
+
+.text-light {
+    color: white;
 }
 
 .dib-va-container {
@@ -31,4 +31,15 @@ body {
 
 .pab-100px {
     padding-bottom: 100px;
+}
+
+.content a {
+    text-decoration: none;
+    transition: color .15s ease-in;
+    color: #F19584;
+}
+
+.content a:hover   {
+    opacity: .5;
+    transition: all .15s ease-in;
 }

@@ -8,7 +8,7 @@
 
 <body>
     <!-- Banner -->
-    <div class="w-100  gray-gradient ">
+    <div class="w-100 bg-1 ph5 text-light">
 
         <!-- Navbar -->
         <div class="mw8 center">
@@ -18,7 +18,7 @@
                         TITLE
                     </div>
                 </div>
-                <div class="fl w-50 silver">
+                <div class="fl w-50">
                     <div class="cf">
                         <div class="fr">
                             <div class="tr fw3 ph4 lh-nav">
@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <!-- title -->
+        <!-- Title -->
         <div class="mw8 center vh-40 dib-va-container">
             <div class="dib-va-inner">
                 <h1 class="f1 pab-100px">Turn an image to Black and White on hover with CSS</h1>
@@ -44,6 +44,46 @@
     </div>
 
     <!-- Content -->
+    <div class="content ph5 mv6">
+        <div class="mw8 center fw3 lh-copy">
+            <p>Here is a CSS code snippet to help you transition an image to Black and White on mouse hover.<br>
+                <a id="more"></a>
+            </p>
+            <h2 id="Demo">
+                <a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2>
+            <p></p>
+            <div class="cp_embed_wrapper">
+                <iframe id="cp_embed_PzLkEr" src="//codepen.io/klugjo/embed/PzLkEr?height=265&amp;theme-id=0&amp;slug-hash=PzLkEr&amp;default-tab=css%2Cresult&amp;user=klugjo&amp;embed-version=2"
+                    scrolling="no" frameborder="0" height="265" allowtransparency="true" allowfullscreen="true" name="CodePen Embed"
+                    title="CodePen Embed 1" class="cp_embed_iframe " style="width: 100%; overflow: hidden;"></iframe>
+            </div>
+            <p></p>
+            <script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
 
+            <h2 id="Code">
+                <a href="#Code" class="headerlink" title="Code"></a>Code</h2>
+            <p>Here is the full code</p>
+            <figure class="highlight css">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td>
+                            <td
+                                class="code"><pre><span class="line"><span class="selector-tag">img</span> {</span><br><span class="line">  <span class="attribute">transition</span>: filter .<span class="number">5s</span> ease-in-out;</span><br><span class="line">  <span class="attribute">-webkit-filter</span>: <span class="built_in">grayscale</span>(0%); <span class="comment">/* Ch 23+, Saf 6.0+, BB 10.0+ */</span></span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(0%); <span class="comment">/* FF 35+ */</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">img</span><span class="selector-pseudo">:hover</span> {</span><br><span class="line">  <span class="attribute">-webkit-filter</span>: <span class="built_in">grayscale</span>(100%); <span class="comment">/* Ch 23+, Saf 6.0+, BB 10.0+ */</span></span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(100%); <span class="comment">/* FF 35+ */</span></span><br><span class="line">}</span><br></pre></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </figure>
+            <p><br></p>
+            <ul>
+                <li>The Black and White effect is achieved with the <code>grayscale</code> value for the <a href="https://developer.mozilla.org/en/docs/Web/CSS/filter"
+                        target="_blank" rel="external">filter</a> property. <code>grayscale(100%)</code> corresponds to Black and White and
+                    <code>grayscale(0%)</code> corresponds to full colors.<br>The <code>-webkit-filter</code> prefix is <a href="http://shouldiprefix.com/#filters"
+                        target="_blank" rel="external">necessary for that property</a>.</li>
+                <li>The smooth animation is achieved with the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions"
+                        target="_blank" rel="external">transition</a> property.</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
