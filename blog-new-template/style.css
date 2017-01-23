@@ -35,6 +35,10 @@ body {
     width: 64rem;
 }
 
+.ta-justify {
+    text-align: justify;
+}
+
 .header-icon {
     font-size: 30vh;
     opacity: 0.4;
@@ -50,7 +54,7 @@ body {
 .content a {
     text-decoration: none;
     transition: color .15s ease-in;
-    color: #F19584;
+    color: #29C6CD;
 }
 
 .content a:hover   {
