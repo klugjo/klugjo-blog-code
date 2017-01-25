@@ -22,6 +22,10 @@ body {
     width: 64rem;
 }
 
+.tj {
+    text-align: justify;
+}
+
 .header-icon {
     font-size: 30vh;
     opacity: 0.4;
