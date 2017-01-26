@@ -26,95 +26,116 @@
         </nav>
 
         <!-- Title -->
-        <div class="mw8 center vh-40 dt">
+        <div class="w-100 mw8 center dt vh-40">
             <div class="dtc v-mid white">
-                <h1 class="f1-l f2-m tc tc-m tl-ns">Turn an image to Black and White on hover with CSS</h1>
-                <p class="f4 fw3 pab-100px tc tc-m tl-ns">20 Dec 2016</p>
+                <h1 class="f1-l f2-m ">Software Development Blog.</h1>
+                <p class="f4 fw3 pab-100px">by Jonathan Klughertz</p>
             </div>
         </div>
 
         <!-- Icon -->
         <div class="relative w-100 mw8 center white dn dn-m db-ns">
-            <span class="header-icon devicon-css3"></span>
+            <div class="lamp pointer">
+                <div class="pa bg foot"></div>
+                <div class="pa bg leg-1"></div>
+                <div class="pa bg knee"></div>
+                <div class="pa bg leg-2"></div>
+                <div class="pa neck-mask">
+                    <div class="pa bg neck"></div>
+                </div>
+                <div class="pa head-mask-1">
+                    <div class="pa head-mask-2">
+                    <div class="pa bg head"></div>
+                    </div>
+                </div>
+                <div class="pa nose-mask">
+                    <div class="pa bg nose"></div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Content -->
     <div class="w-100 content ph2 ph4-m ph5-l mv5 mv6-l">
         <div class="mw8 center">
-            <div class="cf">
-                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m">
-                    <p>Here is a CSS code snippet to help you transition an image to Black and White on mouse hover.<br>
-                        <a id="more"></a>
-                    </p>
-                    <h2 id="Demo">
-                        <a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2>
-                    <p></p>
-                    <div class="cp_embed_wrapper">
-                        <iframe id="cp_embed_PzLkEr" src="//codepen.io/klugjo/embed/PzLkEr?height=265&amp;theme-id=0&amp;slug-hash=PzLkEr&amp;default-tab=css%2Cresult&amp;user=klugjo&amp;embed-version=2"
-                            scrolling="no" frameborder="0" height="265" allowtransparency="true" allowfullscreen="true" name="CodePen Embed"
-                            title="CodePen Embed 1" class="cp_embed_iframe " style="width: 100%; overflow: hidden;"></iframe>
-                    </div>
-                    <p></p>
-                    <script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-                    <h2 id="Code">
-                        <a href="#Code" class="headerlink" title="Code"></a>Code</h2>
-                    <p>Here is the full code</p>
-                    <figure class="highlight css">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td>
-                                    <td
-                                        class="code"><pre><span class="line"><span class="selector-tag">img</span> {</span><br><span class="line">  <span class="attribute">transition</span>: filter .<span class="number">5s</span> ease-in-out;</span><br><span class="line">  <span class="attribute">-webkit-filter</span>: <span class="built_in">grayscale</span>(0%); <span class="comment">/* Ch 23+, Saf 6.0+, BB 10.0+ */</span></span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(0%); <span class="comment">/* FF 35+ */</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">img</span><span class="selector-pseudo">:hover</span> {</span><br><span class="line">  <span class="attribute">-webkit-filter</span>: <span class="built_in">grayscale</span>(100%); <span class="comment">/* Ch 23+, Saf 6.0+, BB 10.0+ */</span></span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(100%); <span class="comment">/* FF 35+ */</span></span><br><span class="line">}</span><br></pre></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </figure>
-                    <p><br></p>
-                    <ul>
-                        <li>The Black and White effect is achieved with the <code>grayscale</code> value for the <a href="https://developer.mozilla.org/en/docs/Web/CSS/filter"
-                                target="_blank" rel="external">filter</a> property. <code>grayscale(100%)</code> corresponds to Black and White and
-                            <code>grayscale(0%)</code> corresponds to full colors.<br>The <code>-webkit-filter</code> prefix is <a href="http://shouldiprefix.com/#filters"
-                                target="_blank" rel="external">necessary for that property</a>.</li>
-                        <li>The smooth animation is achieved with the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions"
-                                target="_blank" rel="external">transition</a> property.</li>
-                    </ul>
+            <div class="dt w-100 hover-color pointer pa3 border-color bl mv4">
+                <div class="dtc v-mid w-90 black-70">
+                    <span class="f5 fw3 lh-copy pr4">14 March 2016</span> <a class="fw3" href="#">#Books</a> <a class="fw3" href="#">#Ego</a> <a class="fw3" href="#">#Self-help</a>
+                    <br />
+                    <span class="f3 fw3 lh-copy">Notes on Ego is the Ennemy by Ryan Holiday<span>
                 </div>
-                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
-                    <hr class="dn-l mw4 black-50 mt5" />
-                    <div class="mt5 mt0-l">
-                        <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
-                            <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
-                                <img src="http://tachyons.io/img/avatar_1.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Photo of a kitty staring at you">
-                            </div>
-                            <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
-                                My name is Jonathan Klughertz and this is my blog.<br>
-                                I am a full stack software engineer with a strong front-end focus.<br> 
-                                I currently live and work in Singapore, hit me up if you are in the region.
-                            </div>
-                        </article>
-                    </div>
-                    <hr class="dn-l mw4 black-50 mt5" />
-                    <div class="mt5 tc tl-l">
-                        <h3>Recent Posts</h3>
-                        <p>
-                            <a href="#">Setup Jest to use an External Configuration file</a>
-                        </p>
-                        <p>
-                            <a href="#">8 VSCode Configuration options you need to know about</a>
-                        </p>
-                        <p>
-                            <a href="#">Github avatar not showing on list of commits</a>
-                        </p>
-                        <p>
-                            <a href="#">Setup the latest React in JSBin</a>
-                        </p>
-                        <p>
-                            <a href="#">Set Menu Items in Electron</a>
-                        </p>
-                    </div>
+                <div class="dtc v-mid w-10 f1 black-50 tr">
+                    <span class="devicon-book3"></span>
+                </div>
+            </div>
+            <div class="dt w-100 hover-color pointer pa3 border-color bl mv4">
+                <div class="dtc v-mid w-90 black-70">
+                    <span class="f5 fw3 lh-copy pr4">14 March 2016</span> <a class="fw3" href="#">#Books</a> <a class="fw3" href="#">#Ego</a> <a class="fw3" href="#">#Self-help</a>
+                    <br />
+                    <span class="f3 fw3 lh-copy">Preformance Comparison: ES6 Templates Literals vs Handlebars in Node<span>
+                </div>
+                <div class="dtc v-mid w-10 f1 black-50 tr">
+                    <span class="devicon-book3"></span>
+                </div>
+            </div>
+            <div class="dt w-100 hover-color pointer pa3 border-color bl mv4">
+                <div class="dtc v-mid w-90 black-70">
+                    <span class="f5 fw3 lh-copy pr4">14 March 2016</span> <a class="fw3" href="#">#Books</a> <a class="fw3" href="#">#Ego</a> <a class="fw3" href="#">#Self-help</a>
+                    <br />
+                    <span class="f3 fw3 lh-copy">Notes on Ego is the Ennemy by Ryan Holiday<span>
+                </div>
+                <div class="dtc v-mid w-10 f1 black-50 tr">
+                    <span class="devicon-book3"></span>
+                </div>
+            </div>
+            <div class="dt w-100 hover-color pointer pa3 border-color bl mv4">
+                <div class="dtc v-mid w-90 black-70">
+                    <span class="f5 fw3 lh-copy pr4">14 March 2016</span> <a class="fw3" href="#">#Books</a> <a class="fw3" href="#">#Ego</a> <a class="fw3" href="#">#Self-help</a>
+                    <br />
+                    <span class="f3 fw3 lh-copy">Notes on Ego is the Ennemy by Ryan Holiday<span>
+                </div>
+                <div class="dtc v-mid w-10 f1 black-50 tr">
+                    <span class="devicon-book3"></span>
+                </div>
+            </div>
+            <div class="dt w-100 hover-color pointer pa3 border-color bl mv4">
+                <div class="dtc v-mid w-90 black-70">
+                    <span class="f5 fw3 lh-copy pr4">14 March 2016</span> <a class="fw3" href="#">#Books</a> <a class="fw3" href="#">#Ego</a> <a class="fw3" href="#">#Self-help</a>
+                    <br />
+                    <span class="f3 lh-copy">Notes on Ego is the Ennemy by Ryan Holiday<span>
+                </div>
+                <div class="dtc v-mid w-10 f1 black-50 tr">
+                    <span class="devicon-book3"></span>
+                </div>
+            </div>
+            <div class="dt w-100 hover-color pointer pa3 border-color bl mv4">
+                <div class="dtc v-mid w-90 black-70">
+                    <span class="f5 fw3 lh-copy pr4">14 March 2016</span> <a class="fw3" href="#">#Books</a> <a class="fw3" href="#">#Ego</a> <a class="fw3" href="#">#Self-help</a>
+                    <br />
+                    <span class="f3 lh-copy">Notes on Ego is the Ennemy by Ryan Holiday<span>
+                </div>
+                <div class="dtc v-mid w-10 f1 black-50 tr">
+                    <span class="devicon-book3"></span>
+                </div>
+            </div>
+            <div class="dt w-100 hover-color pointer pa3 border-color bl mv4">
+                <div class="dtc v-mid w-90 black-70">
+                    <span class="f5 fw3 lh-copy pr4">14 March 2016</span> <a class="fw3" href="#">#Books</a> <a class="fw3" href="#">#Ego</a> <a class="fw3" href="#">#Self-help</a>
+                    <br />
+                    <span class="f3 lh-copy">Notes on Ego is the Ennemy by Ryan Holiday<span>
+                </div>
+                <div class="dtc v-mid w-10 f1 black-50 tr">
+                    <span class="devicon-book3"></span>
+                </div>
+            </div>
+            <div class="dt w-100 hover-color pointer pa3 border-color bl mv4">
+                <div class="dtc v-mid w-90 black-70">
+                    <span class="f5 fw3 lh-copy pr4">14 March 2016</span> <a class="fw3" href="#">#Books</a> <a class="fw3" href="#">#Ego</a> <a class="fw3" href="#">#Self-help</a>
+                    <br />
+                    <span class="f3 lh-copy">Notes on Ego is the Ennemy by Ryan Holiday<span>
+                </div>
+                <div class="dtc v-mid w-10 f1 black-50 tr">
+                    <span class="devicon-book3"></span>
                 </div>
             </div>
         </div>
